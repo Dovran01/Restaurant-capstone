@@ -25,7 +25,7 @@ module.exports = {
 	test: {
 		client: "postgresql",
 		pool: { min: 1, max: 5 },
-		connection: DATABASE_URL_TEST,
+		connection: 'postgres://lewxesht:sJhr-Azp8mspE-RFzOFcg-ETyywCiTsr@bubble.db.elephantsql.com/lewxesht',
 		migrations: {
 			directory: path.join(__dirname, "src", "db", "migrations"),
 		},
@@ -37,7 +37,7 @@ module.exports = {
 	preview: {
 		client: "postgresql",
 		pool: { min: 1, max: 5 },
-		connection: DATABASE_URL_PREVIEW,
+		connection: 'postgres://lewxesht:sJhr-Azp8mspE-RFzOFcg-ETyywCiTsr@bubble.db.elephantsql.com/lewxesht',
 		migrations: {
 			directory: path.join(__dirname, "src", "db", "migrations"),
 		},
@@ -49,7 +49,7 @@ module.exports = {
 	production: {
 		client: "postgresql",
 		pool: { min: 1, max: 5 },
-		connection: DATABASE_URL,
+		connection: 'postgres://lewxesht:sJhr-Azp8mspE-RFzOFcg-ETyywCiTsr@bubble.db.elephantsql.com/lewxesht',
 		migrations: {
 			directory: path.join(__dirname, "src", "db", "migrations"),
 		},
