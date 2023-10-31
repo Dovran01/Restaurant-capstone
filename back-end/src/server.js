@@ -9,6 +9,9 @@ const { PORT = 5001 } = process.env;
 
 const app = require("./app");
 const knex = require("./db/connection");
+const cors = require('cors'); // Import the CORS package
+
+app.use(cors()); 
 
 knex.migrate
 	.latest()
