@@ -56,6 +56,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "knex": "^3.0.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^3.0.1"
   }
 }
