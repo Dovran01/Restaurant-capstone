@@ -4,10 +4,8 @@
 */
 
 import React from "react";
-
-//import components
+import { Link } from "react-router-dom";
 import ReservationCancel from "./ReservationCancel";
-
 /**
  * Defines the reservations list.
  * @param reservations
@@ -16,6 +14,13 @@ import ReservationCancel from "./ReservationCancel";
  * the date to be displayed in the list
  * @returns {JSX.Element}
  */
+/** @format 
+ * 
+ * Path: front-end\src\reservations\ReservationsList.js
+*/
+
+
+
 const ReservationsList = ({ reservations, date }) => {
 	const tableRows = reservations.map((reservation) => (
 		<tr key={reservation.reservation_id}>
@@ -31,21 +36,21 @@ const ReservationsList = ({ reservations, date }) => {
 			</td>
 			<td>
 				{reservation.status === "booked" && (
-					<a
-						className="btn btn-success"
-						href={`/reservations/${reservation.reservation_id}/seat`}>
+					<Link 
+						className="btn btn-success" 
+						to={`/reservations/${reservation.reservation_id}/seat`}>
 						Seat
-					</a>
+					</Link>
 				)}
 			</td>
 			{reservation.status === "booked" || reservation.status === "seated" ? (
 				<>
 					<td>
-						<a
-							className="btn btn-primary"
-							href={`/reservations/${reservation.reservation_id}/edit`}>
+						<Link 
+							className="btn btn-primary" 
+							to={`/reservations/${reservation.reservation_id}/edit`}>
 							Edit
-						</a>
+						</Link>
 					</td>
 					<td>
 						<ReservationCancel reservation_id={reservation.reservation_id} />
