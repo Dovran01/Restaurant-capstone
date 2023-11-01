@@ -222,6 +222,7 @@ async function list(req, res) {
 }
 
 module.exports = {
+	
 	create: [
 		hasData,
 		hasRequiredProperties,
