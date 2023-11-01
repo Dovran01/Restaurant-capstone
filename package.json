@@ -49,8 +49,6 @@
   "author": "Thinkful, Inc.",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "http-server": "^14.1.1"
   },
   "dependencies": {
