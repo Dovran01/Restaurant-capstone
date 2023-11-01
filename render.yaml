@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: your-service-name
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: ./build
+    routes:
+      - src: /.*
+        dest: /index.html
+        headers:
+          cache-control: max-age=0,no-cache,no-store,must-revalidate
